@@ -1,19 +1,15 @@
 import React from 'react';
+import ValueInput from './input/ValueInput';
 
 class CurrencyConversion extends React.Component {
  constructor() {
    super();
-   this.state = {
-     count: 0,
-   };
  }
 
  render() {
-   return (
-       <form>
-            <p>Enter a value:</p>
-            <input type="text" name="name" />
-        </form>
+   return (<div>
+    <ValueInput />
+    </div>
    );
  }
 }
