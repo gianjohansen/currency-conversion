@@ -28,8 +28,10 @@ class CurrencyConversion extends React.Component {
   requestExchangeRates() {
     console.log("requesting exchange rates");
     $.getJSON( "http://api.fixer.io/latest?base=" + this.state.currencies.from, (data) => {
-      this.state.rates[this.state.currencies.from] = data;
-      console.log(this.state.rates[this.state.currencies.from]);
+      var rates = this.state.rates;
+      data.rates[this.state.currencies.from] = 1;
+      rates[this.state.currencies.from] = data;
+      this.setState({ rates: rates});
     });
   }
 
@@ -37,8 +39,8 @@ class CurrencyConversion extends React.Component {
    return (<div>
       <ValueInput totalInput={this.state.totalInput} setTotalInput={this.setTotalInput.bind(this)} />
       <CurrencySelectors setCurrencyFrom={this.setCurrency.bind(this, true)} setCurrencyTo={this.setCurrency.bind(this, false)} />
-      <ValueOutput totalInput={this.state.totalInput} currencies={this.state.currencies} />
-      <OtherConversions totalInput={this.state.totalInput} currencies={this.state.currencies} />
+      <ValueOutput totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
+      <OtherConversions totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
     </div>
    );
  }

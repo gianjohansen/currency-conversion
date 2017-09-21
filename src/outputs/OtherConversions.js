@@ -3,7 +3,13 @@ import React from 'react';
 var OtherConversions = React.createClass({
 
   calculateValueByOffset: function() {
-    return this.props.totalInput / 10 * 1.2;
+
+    // if we havent loaded rates yet
+    if (!this.props.rates[this.props.currencies.from]) return null;
+    
+    // output conversion
+    return this.props.totalInput / 10 * this.props.rates[this.props.currencies.from].rates[this.props.currencies.to];
+
   },
 
   render: function(){
