@@ -1,17 +1,14 @@
 import React from 'react';
 
-class ValueInput extends React.Component {
- constructor() {
-   super();
- }
-
- render() {
-   return (
-    <form>
+var ValueInput = React.createClass({
+  render: function(){
+    return (
+      <form>
         <p>Enter a value:</p>
-        <input type="text" name="valueinput" />
-    </form>
-   );
- }
-}
+        <input type="text" value={this.props.totalInput} name="valueinput" onChange={this.props.setTotalInput} />
+      </form>
+    )
+  }
+});
+
 export default ValueInput;
