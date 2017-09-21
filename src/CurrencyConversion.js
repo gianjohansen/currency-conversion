@@ -1,6 +1,8 @@
 import React from 'react';
 import ValueInput from './inputs/ValueInput';
 import CurrencySelectors from './inputs/CurrencySelectors';
+import ValueOutput from './outputs/ValueOutput';
+import OtherConversions from './outputs/OtherConversions';
 
 class CurrencyConversion extends React.Component {
   constructor() {
@@ -24,9 +26,10 @@ class CurrencyConversion extends React.Component {
 
  render() {
    return (<div>
-      <strong>Calculation:</strong> {this.state.totalInput} from {this.state.currencyFrom} to {this.state.currencyTo}
       <ValueInput totalInput={this.state.totalInput} setTotalInput={this.setTotalInput.bind(this)} />
       <CurrencySelectors setCurrencyFrom={this.setCurrencyFrom.bind(this)} setCurrencyTo={this.setCurrencyTo.bind(this)} />
+      <ValueOutput totalInput={this.state.totalInput} currencyFrom={this.state.currencyFrom} currencyTo={this.state.currencyTo} />
+      <OtherConversions totalInput={this.state.totalInput} currencyFrom={this.state.currencyFrom} currencyTo={this.state.currencyTo} />
     </div>
    );
  }
