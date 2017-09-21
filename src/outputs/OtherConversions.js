@@ -7,9 +7,12 @@ var OtherConversions = React.createClass({
   },
 
   render: function(){
+    if (!this.props.currencies.from) return null;
+    if (!this.props.currencies.to) return null;
+
     return (
       <div>
-          <strong>Other Conversions:</strong> {this.props.totalInput / 10}: {this.calculateValueByOffset(this.props.totalInput)}
+        <strong>Other Conversions:</strong> {this.props.totalInput / 10}: {this.calculateValueByOffset(this.props.totalInput)}
       </div>
     )
   }
