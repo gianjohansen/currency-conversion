@@ -1,0 +1,90 @@
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: #605ea1;
+    background-image: -webkit-radial-gradient(circle farthest-corner at right bottom,#ac9cd5 0,#8e7ec2 28%,#6561af 57%,#1a2565 100%);
+    background-image: radial-gradient(circle farthest-corner at right bottom,#ac9cd5 0,#8e7ec2 28%,#6561af 57%,#1a2565 100%);
+}
+/* typography */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*  utilties */
+
+.wait {
+    opacity: 0;
+}
+
+/* application */
+
+.currency-conversion {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* react-super-select */
+
+.r-ss-wrap {
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    
+    &.r-ss-expanded {
+        background: transparent;
+    }
+
+    &:first-child {
+        margin-right: 24px;
+    }
+
+    .r-ss-dropdown .r-ss-dropdown-option.r-ss-selected {
+        background-color: #FFFFFF;
+    }
+
+    .r-ss-dropdown {
+        border-radius: 0;
+        border: none;
+    }
+
+    .r-ss-trigger {
+        background: transparent;
+        font-size: 14px;
+        padding: 4px 16px;
+        color: #FFF;
+        border-bottom: 1px solid #FFF;
+        border-radius: 0;
+
+        & > .currency-dropdown-template {
+            padding: 6px 0;
+
+            .currency-icon {
+                margin-top: 2px;
+            }
+            .currency-label {
+                color: #FFFFFF;
+                line-height: 18px;
+            }
+        }
+        
+        .carat {
+            border-width: 4px;
+            right: 12px;
+    
+            &.down {
+                bottom: 12px;
+                border-color: #FFF transparent transparent transparent;
+            }
+            &.up {
+                bottom: 16px;
+                border-color: transparent transparent #FFF transparent;
+            }
+        }
+    }
+}

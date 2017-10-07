@@ -1,0 +1,23 @@
+.value-input {
+    margin: 0;
+    
+    p {
+        color: #FFF;
+        font-size: 48px;
+        font-weight: 300;
+    }
+    input {
+        background: transparent;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+        color: #FFF;
+        font-size: 36px;
+        font-family: Lato;
+        font-weight: 700;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

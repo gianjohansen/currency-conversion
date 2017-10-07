@@ -4,26 +4,27 @@ import CurrencySelectors from './inputs/CurrencySelectors';
 import ValueOutput from './outputs/ValueOutput';
 import OtherConversions from './outputs/OtherConversions';
 
-require('../assets/css/core.scss');
+require('../www/assets/css/vendor/normalize.scss');
+require('../www/assets/css/core.scss');
 
 class CurrencyConversion extends React.Component {
   constructor() {
     super();
     this.state = {
-      totalInput: '0',
+      totalInput: '',
       currencies: {},
       rates: {}
     };
   }
 
   setTotalInput(e) {
-    this.setState({totalInput: e.target.value});
+    this.setState({totalInput: e.target.rawvalue});
   }
 
   setCurrency(isBase, e) {
     console.log("setting currencies");
     var currencies = this.state.currencies;
-    currencies[(isBase ? "from" : "to")] = e.target.value;
+    currencies[(isBase ? "from" : "to")] = e.label;
     this.setState({ currencies: currencies}, () => { this.requestExchangeRates(); });
   }
 
@@ -38,9 +39,9 @@ class CurrencyConversion extends React.Component {
   }
 
  render() {
-   return (<div className="currency-conversion">
+   return (<div>
       <ValueInput totalInput={this.state.totalInput} setTotalInput={this.setTotalInput.bind(this)} />
-      <CurrencySelectors setCurrencyFrom={this.setCurrency.bind(this, true)} setCurrencyTo={this.setCurrency.bind(this, false)} />
+      <CurrencySelectors totalInput={this.state.totalInput} setCurrencyFrom={this.setCurrency.bind(this, true)} setCurrencyTo={this.setCurrency.bind(this, false)} />
       <ValueOutput totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
       <OtherConversions totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
     </div>

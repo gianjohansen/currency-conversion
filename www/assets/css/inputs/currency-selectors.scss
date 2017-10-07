@@ -1,0 +1,25 @@
+.currency-selectors {
+    opacity: 1;
+    transition: all 0.3s ease;
+    padding-top: 50px;
+}
+
+.currency-icon {    
+    width: 18px;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: top;
+    margin-top: 2px;
+
+    img {
+        width: 100%;
+        line-height: 18px;
+        display: block;
+    }
+}
+.currency-label {
+    display: inline-block;
+    margin: 0;
+    font-size: 12px;
+    color: #222c6d;
+}
