@@ -1,11 +1,17 @@
 import React from 'react';
 
+require('../../www/assets/css/outputs/value-output.scss');
+var NumberFormat = require('react-number-format');
+
 var ValueOutput = React.createClass({
 
   calculateValue: function() {
 
     // if we havent loaded rates yet
     if (!this.props.rates[this.props.currencies.from]) return null;
+
+    console.log("doing output conversion");
+    console.log(this.props.totalInput);
 
     // output conversion
     return this.props.totalInput * this.props.rates[this.props.currencies.from].rates[this.props.currencies.to];
@@ -14,9 +20,13 @@ var ValueOutput = React.createClass({
 
   render: function(){
     return (
-      <div className={this.props.currencies.from == null || this.props.currencies.from == null ? "wait" : ""}>
-        <strong>Calculation:</strong> 
-        {this.props.totalInput} from {this.props.currencies.from} to {this.props.currencies.to} = {this.calculateValue(this.props.totalInput)}
+      <div className={this.props.currencies.from == null || this.props.currencies.from == null ? "wait value-output" : "value-output"}>
+        <span className="title">{this.props.currencies.from}</span>
+        <span className="seperator">↓</span>
+        <span className="value">
+          <NumberFormat value={this.calculateValue(this.props.totalInput)} displayType={'text'} thousandSeparator={true} decimalPrecision={'2'}/>
+          <span className="to">{this.props.currencies.to}</span>
+        </span>
       </div>
     )
   }

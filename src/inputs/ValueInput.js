@@ -10,11 +10,7 @@ var ValueInput = React.createClass({
   },
 
   onChange(event) {
-    // formatted pretty value
-    console.log(event.target.value);
-
-    // raw value
-    console.log(event.target.rawValue);
+    this.props.setTotalInput(event.target.rawValue);
   },
 
   render: function(){
@@ -23,7 +19,7 @@ var ValueInput = React.createClass({
         <p>Enter a value:</p>
         <Cleave className='cleaveInput'
                 options={{ numericOnly: true, numeral: true, numeralThousandsGroupStyle: 'thousand' }}
-                onChange={this.props.setTotalInput} />
+                onChange={this.onChange} />
         {/* <input  type="text" value={this.props.totalInput} name="valueinput" onChange= /> */}
       </form>
     )

@@ -18,7 +18,8 @@ class CurrencyConversion extends React.Component {
   }
 
   setTotalInput(e) {
-    this.setState({totalInput: e.target.rawvalue});
+    console.log("setting total input");
+    this.setState({totalInput: e});
   }
 
   setCurrency(isBase, e) {
@@ -43,7 +44,7 @@ class CurrencyConversion extends React.Component {
       <ValueInput totalInput={this.state.totalInput} setTotalInput={this.setTotalInput.bind(this)} />
       <CurrencySelectors totalInput={this.state.totalInput} setCurrencyFrom={this.setCurrency.bind(this, true)} setCurrencyTo={this.setCurrency.bind(this, false)} />
       <ValueOutput totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
-      <OtherConversions totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} />
+      {/* <OtherConversions totalInput={this.state.totalInput} currencies={this.state.currencies} rates={this.state.rates} /> */}
     </div>
    );
  }
