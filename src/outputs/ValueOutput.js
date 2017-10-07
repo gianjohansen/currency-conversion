@@ -24,7 +24,7 @@ var ValueOutput = React.createClass({
         <span className="title">{this.props.currencies.from}</span>
         <span className="seperator">↓</span>
         <span className="value">
-          <NumberFormat value={this.calculateValue(this.props.totalInput)} displayType={'text'} thousandSeparator={true} decimalPrecision={'2'}/>
+          <NumberFormat value={this.calculateValue(this.props.totalInput)} displayType={'text'} thousandSeparator={true} decimalPrecision={2}/>
           <span className="to">{this.props.currencies.to}</span>
         </span>
       </div>
