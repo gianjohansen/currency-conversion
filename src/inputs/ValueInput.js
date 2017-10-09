@@ -6,10 +6,26 @@ require('../../www/assets/css/inputs/value-input.scss');
 
 var ValueInput = React.createClass({
   componentDidMount(){
-    $(".cleaveInput").focus();
+    setTimeout(function() {
+      $(".value-input").css("opacity", "1");
+      $(".cleaveInput").focus();
+    }, 600);
   },
 
   onChange(event) {
+
+    if (event.target.rawValue == "") {
+      $(".currency-selectors").css("height", "0");
+    }
+    else {
+      setTimeout(function() {
+        $(".currency-selectors").css("height", $(".currency-selectors-inner").innerHeight());
+      }, 200);
+      setTimeout(function() {
+        $(".currency-selectors").css("opacity", "1");
+      }, 700);
+    }
+    
     this.props.setTotalInput(event.target.rawValue);
   },
 

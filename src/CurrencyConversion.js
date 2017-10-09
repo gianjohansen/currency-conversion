@@ -27,6 +27,12 @@ class CurrencyConversion extends React.Component {
     var currencies = this.state.currencies;
     currencies[(isBase ? "from" : "to")] = e.label;
     this.setState({ currencies: currencies}, () => { this.requestExchangeRates(); });
+
+    setTimeout(function() {
+      if (currencies.from && currencies.to) {
+        $(".value-output").css("height", $(".value-output-inner").innerHeight());
+      }
+    }, 600);
   }
 
   requestExchangeRates() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import ReactSuperSelect from 'react-super-select';
 import classNames from 'classnames';
 
@@ -27,6 +28,9 @@ var currencyList = [
 
 var CurrencySelectors = React.createClass({
 
+  componentDidMount: function() {
+  },
+
   allCurrencies: function() {
     let items = [];
     items.push(<option key=""></option>);
@@ -53,28 +57,22 @@ var CurrencySelectors = React.createClass({
 
   render: function(){
     return (
-      <div className={this.props.totalInput == "" ? "wait currency-selectors" : "currency-selectors"}>
-        <ReactSuperSelect placeholder="Convert from..." 
-        onChange={this.props.setCurrencyFrom} 
-        dataSource={currencyList} 
-        customOptionTemplateFunction={this.currencyDropdownItemTemplate} 
-        clearable={false}
-        />
+      <div className="currency-selectors">
+        <div className="currency-selectors-inner">
+          <ReactSuperSelect placeholder="Convert from..." 
+          onChange={this.props.setCurrencyFrom} 
+          dataSource={currencyList} 
+          customOptionTemplateFunction={this.currencyDropdownItemTemplate} 
+          clearable={false}
+          />
 
-        <ReactSuperSelect placeholder="Convert to..." 
-        onChange={this.props.setCurrencyTo} 
-        dataSource={currencyList} 
-        customOptionTemplateFunction={this.currencyDropdownItemTemplate} 
-        clearable={false}
-        />
-
-        {/* <select onChange={this.props.setCurrencyFrom}>
-          {this.allCurrencies()}
-        </select>
-        -
-        <select onChange={this.props.setCurrencyTo}>
-          {this.allCurrencies()}
-        </select> */}
+          <ReactSuperSelect placeholder="Convert to..." 
+          onChange={this.props.setCurrencyTo} 
+          dataSource={currencyList} 
+          customOptionTemplateFunction={this.currencyDropdownItemTemplate} 
+          clearable={false}
+          />
+        </div>
       </div>
     )
   }

@@ -20,13 +20,15 @@ var ValueOutput = React.createClass({
 
   render: function(){
     return (
-      <div className={this.props.currencies.from == null || this.props.currencies.from == null ? "wait value-output" : "value-output"}>
-        <span className="title">{this.props.currencies.from}</span>
-        <span className="seperator">↓</span>
-        <span className="value">
-          <NumberFormat value={this.calculateValue(this.props.totalInput)} displayType={'text'} thousandSeparator={true} decimalPrecision={2}/>
-          <span className="to">{this.props.currencies.to}</span>
-        </span>
+      <div className="value-output">
+        <div className="value-output-inner">
+          <span className="title">{this.props.currencies.from}</span>
+          <span className="seperator">↓</span>
+          <span className="value">
+            <NumberFormat value={this.calculateValue(this.props.totalInput)} displayType={'text'} thousandSeparator={true} decimalPrecision={2}/>
+            <span className="to">{this.props.currencies.to}</span>
+          </span>
+        </div>
       </div>
     )
   }
