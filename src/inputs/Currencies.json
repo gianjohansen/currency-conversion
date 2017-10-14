@@ -1,0 +1,194 @@
+[
+    {
+      "id": 1,
+      "attributeName": "usd",
+      "label": "USD",
+      "name": "US Dollar"
+    },
+    {
+      "id": 2,
+      "attributeName": "eur",
+      "label": "EUR",
+      "name": "Euros"
+    },
+    {
+      "id": 3,
+      "attributeName": "aud",
+      "label": "AUD",
+      "name": "Australian Dollars"
+    },
+    {
+      "id": 4,
+      "attributeName": "bgn",
+      "label": "BGN",
+      "name": "Bulgarian Lev"
+    },
+    {
+      "id": 5,
+      "attributeName": "brl",
+      "label": "BRL",
+      "name": "Brazilian Real"
+    },
+    {
+      "id": 6,
+      "attributeName": "cad",
+      "label": "CAD",
+      "name": "Canadian Dollars"
+    },
+    {
+      "id": 7,
+      "attributeName": "chf",
+      "label": "CHF",
+      "name": "Swiss Franc"
+    },
+    {
+      "id": 8,
+      "attributeName": "cny",
+      "label": "CNY",
+      "name": "Chinese Yuan"
+    },
+    {
+      "id": 9,
+      "attributeName": "czk",
+      "label": "CZK",
+      "name": "Czech Koruna"
+    },
+    {
+      "id": 10,
+      "attributeName": "dkk",
+      "label": "DKK",
+      "name": "Danish Krone"
+    },
+    {
+      "id": 11,
+      "attributeName": "gbp",
+      "label": "GBP",
+      "name": "British Pounds"
+    },
+    {
+      "id": 12,
+      "attributeName": "hkd",
+      "label": "HKD",
+      "name": "Hong Kong Dollars"
+    },
+    {
+      "id": 13,
+      "attributeName": "hrk",
+      "label": "HRK",
+      "name": "Croatian Kuna"
+    },
+    {
+      "id": 14,
+      "attributeName": "huf",
+      "label": "HUF",
+      "name": "Hungarian Forint"
+    },
+    {
+      "id": 15,
+      "attributeName": "idr",
+      "label": "IDR",
+      "name": "Indonesian Rupiah"
+    },
+    {
+      "id": 16,
+      "attributeName": "ils",
+      "label": "ILS",
+      "name": "Israeli Shekel"
+    },
+    {
+      "id": 17,
+      "attributeName": "inr",
+      "label": "INR",
+      "name": "Indian Rupee"
+    },
+    {
+      "id": 18,
+      "attributeName": "jpy",
+      "label": "JPY",
+      "name": "Japanese Yen"
+    },
+    {
+      "id": 19,
+      "attributeName": "krw",
+      "label": "KRW",
+      "name": "South Korean Won"
+    },
+    {
+      "id": 20,
+      "attributeName": "mxn",
+      "label": "MXN",
+      "name": "Mexican Peso"
+    },
+    {
+      "id": 21,
+      "attributeName": "myr",
+      "label": "MYR",
+      "name": "Malaysian Ringgit"
+    },
+    {
+      "id": 22,
+      "attributeName": "nok",
+      "label": "NOK",
+      "name": "Norwegian Krone"
+    },
+    {
+      "id": 23,
+      "attributeName": "nzd",
+      "label": "NZD",
+      "name": "New Zealand Dollar"
+    },
+    {
+      "id": 24,
+      "attributeName": "php",
+      "label": "PHP",
+      "name": "Philippines Peso"
+    },
+    {
+      "id": 25,
+      "attributeName": "pln",
+      "label": "PLN",
+      "name": "Polish Zloty"
+    },
+    {
+      "id": 26,
+      "attributeName": "ron",
+      "label": "RON",
+      "name": "Romanian Leu"
+    },
+    {
+      "id": 27,
+      "attributeName": "rub",
+      "label": "RUB",
+      "name": "Russian Ruble"
+    },
+    {
+      "id": 28,
+      "attributeName": "sek",
+      "label": "SEK",
+      "name": "Swedish Krona"
+    },
+    {
+      "id": 29,
+      "attributeName": "sgd",
+      "label": "SGD",
+      "name": "Singapore Dollar"
+    },
+    {
+      "id": 30,
+      "attributeName": "thb",
+      "label": "THB",
+      "name": "Thai Baht"
+    },
+    {
+      "id": 31,
+      "attributeName": "try",
+      "label": "TRY",
+      "name": "Turkish Lira"
+    },
+    {
+      "id": 32,
+      "attributeName": "zar",
+      "label": "ZAR",
+      "name": "South African Rand"
+    }
+]

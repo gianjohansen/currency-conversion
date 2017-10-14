@@ -6,25 +6,7 @@ import classNames from 'classnames';
 require('../../vendor/react-super-select/react-super-select.scss');
 require('../../www/assets/css/inputs/currency-selectors.scss');
 
-var currencyList = [
-  {
-    id: 1,
-    attributeName: "usd",
-    label: "USD",
-    name: "US Dollar",
-    iconClass: "rss-grocery rss-grocery-apple",
-    group: "Fruit",
-    price: 0.79
-  },{
-    id: 2,
-    attributeName: "aud",
-    label: "AUD",
-    name: "Australian Dollar",
-    iconClass: "rss-grocery rss-grocery-carrot",
-    group: "Vegetable",
-    price: 0.21
-  }
-  ];
+var currencyList = require('json-loader!./Currencies.json');
 
 var CurrencySelectors = React.createClass({
 

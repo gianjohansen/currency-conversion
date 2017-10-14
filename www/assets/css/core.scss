@@ -55,6 +55,11 @@ body {
     .r-ss-dropdown {
         border-radius: 0;
         border: none;
+        max-height: 135px;
+        
+        .r-ss-options-wrap {
+            max-height: 135px;
+        }
     }
 
     .r-ss-trigger {
