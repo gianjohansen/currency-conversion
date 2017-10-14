@@ -1,0 +1,45 @@
+.value-input {
+    margin: 0 0 0;
+    opacity: 0;
+    transition: all 0.6s ease;
+    
+    .mobile-divider {
+        width: 120px;
+        height: 2px;
+        background: #FFF;
+        margin: 10px auto 0;
+
+        @media (min-width: 767px) {
+            display: none;
+        }
+    }
+    p {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 700;
+
+        @media (min-width: 767px) {
+            font-size: 48px;
+            font-weight: 300;
+        }
+    }
+    input {
+        background: transparent;
+        text-align: center;
+        box-shadow: none;
+        border: none;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+
+        @media (min-width: 767px) {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
