@@ -45,7 +45,7 @@ var ValueInput = React.createClass({
         <Cleave className='cleaveInput'
                 options={{ numericOnly: true, numeral: true, numeralThousandsGroupStyle: 'thousand' }}
                 onChange={this.onChange} />
-        {/* <input  type="text" value={this.props.totalInput} name="valueinput" onChange= /> */}
+        <div className="mobile-divider"></div>
       </form>
     )
   }

@@ -1,6 +1,4 @@
 body {
-    min-width: 100%;
-    min-height: 100%;
     background: #605ea1;
     background-image: -webkit-radial-gradient(circle farthest-corner at right bottom,#ac9cd5 0,#8e7ec2 28%,#6561af 57%,#1a2565 100%);
     background-image: radial-gradient(circle farthest-corner at right bottom,#ac9cd5 0,#8e7ec2 28%,#6561af 57%,#1a2565 100%);
@@ -26,26 +24,37 @@ body {
 /* application */
 
 .currency-conversion {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 48px);
+
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 /* react-super-select */
 
 .r-ss-wrap {
     width: 200px;
-    display: inline-block;
     text-align: left;
-    vertical-align: top;
+    display: block;
+    margin: 0 auto 20px;
+
+    @media (min-width: 767px) {
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: top;
+    }
     
     &.r-ss-expanded {
         background: transparent;
     }
 
-    &:first-child {
-        margin-right: 24px;
+    @media (min-width: 767px) {
+        &:first-child {
+            margin-right: 24px;
+        }
     }
 
     .r-ss-dropdown .r-ss-dropdown-option.r-ss-selected {
