@@ -4,6 +4,7 @@ import Cleave from '../../node_modules/cleave.js/react';
 
 require('../../www/assets/css/inputs/value-input.scss');
 
+var animationtimer;
 var ValueInput = React.createClass({
   componentDidMount(){
     setTimeout(function() {
@@ -14,16 +15,24 @@ var ValueInput = React.createClass({
 
   onChange(event) {
 
+    // cancel previous animations
+    clearTimeout(animationtimer);
+
+    // show or hide next section
     if (event.target.rawValue == "") {
       $(".currency-selectors").css("height", "0");
+      $(".currency-selectors").css("opacity", "0");
+      $(".value-output").addClass("not-ready");
     }
     else {
-      setTimeout(function() {
+      animationtimer = setTimeout(function() {
         $(".currency-selectors").css("height", $(".currency-selectors-inner").innerHeight());
+        $(".value-output").removeClass("not-ready");
+
+        animationtimer = setTimeout(function() {
+          $(".currency-selectors").css("opacity", "1");
+        }, 500);
       }, 200);
-      setTimeout(function() {
-        $(".currency-selectors").css("opacity", "1");
-      }, 700);
     }
     
     this.props.setTotalInput(event.target.rawValue);
